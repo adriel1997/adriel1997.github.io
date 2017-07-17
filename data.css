@@ -1,0 +1,34 @@
+.eww{
+background: #70e1f5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.dead{
+border-radius: 0.5em ;
+background-color:black;
+color:white;
+border-color:black;
+font-size:2em;
+margin-bottom:2em;
+}
+.de{
+border-radius: 0.5em ;
+background-color:#feee7d;
+color:#f15c5c;
+border-color:#feee7d;
+margin-bottom:2em;
+font-size:2em;
+}
+.dea{
+border-radius: 0.5em ;
+background-color:#F32C52;
+color:white;
+margin-bottom:2em;
+border-color:#F32C52;
+font-size:2em;
+}
+.rent{
+	color:white;
+	font-size:5em;
+}
