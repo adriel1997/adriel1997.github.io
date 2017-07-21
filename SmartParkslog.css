@@ -17,6 +17,13 @@
 	.yelp{
 		background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
 	}
+	.yull{
+		background-color:black;
+	}
+	#opp{
+				margin:20px;
+			}
+			
 	/*		
 .paral {
 	max-width: 100em;
@@ -25,6 +32,9 @@
     background-repeat: no-repeat;
     
 }*/
+.leer{
+	margin-top:3.5em;
+}
 		p.if{
 				color:#880e4f;
 				font-size:20px;
@@ -35,8 +45,9 @@
 .he{
 				color:#4db6ac;
 				font-size:7em;
-				margin:-0.85em;
-				letter-spacing:10px;
+				margin-top:-0.85em;
+				margin-bottom:-0.85em;
+				letter-spacing:0.1em;
 				
 			}
 	.ret{

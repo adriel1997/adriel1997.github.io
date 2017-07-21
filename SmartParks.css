@@ -120,7 +120,21 @@ border-color:#F32C52;
             .ff{
 				float:left;
 				margin:7.25em;
+			}
+			.sail{
+				background: #cb2d3e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+			}
+			.fell{
+				font-size:2em;
+				color:white;
 				
+			}
+            .feff{
+				float:left;
+				margin:3.5em;
 			}
             .fe{
 				width:30em ;
@@ -147,6 +161,14 @@ border-color:#F32C52;
 			#opp{
 				margin:20px;
 			}
+			#lin{
+            color:white;
+			font-size:2em;
+           
+            }
+	#yull{
+		background-color:black;
+	}
 			.pp{
 				position:relative;
 				top:5px;
@@ -194,5 +216,15 @@ border-color:#F32C52;
     background-repeat: no-repeat;
     background-size: cover;
 }
-			
+
+.paa {
+    
+	background-image: url("parking.jpg");
+	    min-height:480px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+	
 			

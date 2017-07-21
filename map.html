@@ -1,14 +1,14 @@
 <html>
     <head>
-	<meta name="robots" content="noindex">
-	<link href="SmartParkslog.css" rel="stylesheet">
+	<link href="SmartParks.css" rel="stylesheet">
+	
        <title>Smart Parks</title>
-	   <!-- Latest compiled and minified CSS -->
-	   <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-database.js"></script>	   
-<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
-<script>
+	   <meta name="robots" content="noindex">
+	   <meta name="robots" content="noindex">
+	   <script>
+	   function myFunction() {
+    alert("This is still under development");
+}
   var config = {
     apiKey: "AIzaSyBSryO6JFyi-ZubeIPuRnr2zOY1ycGLrLE",
     authDomain: "smartparks-34c04.firebaseapp.com",
@@ -28,16 +28,15 @@ ref.on("value", function(snapshot) {
 
 
   firebase.initializeApp(config);
-  function writeUserData(plate, email, model,name,phone,pass) {
-  firebase.database().ref('USERS/' + plate).set({
+  function writeUserData(plate, email, model,name,phone) {
+  firebase.database().ref('Request/' + plate).set({
     NAME: name,
     EMAIL: email,
-	MODEL:model,
+	Location:model,
 	PHONE:phone,
-	PASSWORD:pass
+	
   });
 }
-
 function myFunction(){
 
 var a = document.getElementById("s").value;
@@ -45,13 +44,12 @@ var s = document.getElementById("sm").value;
 var d = document.getElementById("sma").value;
 var f = document.getElementById("smar").value;
 var g = document.getElementById("smart").value;
-var h = document.getElementById("smarts").value;
-writeUserData(d,g,f,a,s,h);
-document.getElementById("rew").disabled = true;
-alert("Continue To Log-In Page ");
+writeUserData(d,g,f,a,s);
 }
 
-</script>
+	   
+	   </script>
+	   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <!-- Optional theme -->
@@ -59,14 +57,11 @@ alert("Continue To Log-In Page ");
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="jsq.js"></script>
-	   <link href="SmartParkslog.css" type="css" rel="stylesheet"/>
+
 	   <link href="SmartParks.css" type="css" rel="stylesheet"/>
 	</head>
 
-	<header>
-	
-	<nav class="navbar navbar-default" id="opp">
+<nav class="navbar navbar-default" id="opp">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -94,33 +89,60 @@ alert("Continue To Log-In Page ");
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-    </header>
-    <body class="yelp" > 
-		
-<h1 class="he">
-	<center>
-	<br>Smart Parks<br><br>
-	</center>
-	</h1>
-	<center><div class="s">
-	<p id="lin"><img class="il" alt="Brand" src="logo.png" height="100" width="100">Sign-Up</p>
+    <body class="sail" >
+	<div class="paa">
+	<center><p class="he">
+	<br>Smart Parks
+	</p>
+	<button class="trew" onclick="window.location.href='#yull'">Click to watch a demo</button>
+	</center></div>
+	<div class="leer">
+<div class="card-deck">
+  <div class="feff">
+  <div class="card">
+    <div class="card-block">
+      <center><p class="fell">Ambience</p></center>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14024.56835171992!2d77.0964115!3d28.5053725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x45a757aa37e73026!2sAmbience+Mall%2C+Gurgaon!5e0!3m2!1sen!2sin!4v1500647113395" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div></div>
+  <div class="feff">
+  <div class="card">
+   
+    <div class="card-block">      
+	<center><p class="fell">NorthCap University parking</p></center>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14024.764873193026!2d77.0501613!3d28.5038941!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc36bc72367198ba9!2sNorthcap+University+Parking+Ground!5e0!3m2!1sen!2sin!4v1500648459425" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div></div>
+  <div class="feff">
+  <div class="card">
+   
+    <div class="card-block">
+   <center> <p class="fell">Cyber-Hub Parking</p></center>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14024.56835171992!2d77.0964115!3d28.5053725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x45a757aa37e73026!2sAmbience+Mall%2C+Gurgaon!5e0!3m2!1sen!2sin!4v1500647113395" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div></div>
+  </div></div></div>	
+  <div class="c">
+  <div id="yull">
+  <center>
+	<p id="lin"><img class="il" alt="Brand" src="logo.png" height="100" width="100">Want to register your car park with us?<br>Fill out the form below:</p>
 	<div id="oop">
   <input type="text" id="s" name="firstname" placeholder="First Name">
   
 	<span class="sde">
 		<input type="text" id="sm" name="lastname" placeholder="Phone Number"></span>
 			<br><br>
-  <input type="text" id="sma" name="firstname" placeholder="Plate Number">
+  <input type="text" id="sma" name="firstname" placeholder="Car Park Name">
 	<span class="sde">	
-		<input type="text"id="smar" name="lastname" placeholder="Car Model"></span>
+		<input type="text"id="smar" name="lastname" placeholder="Address"></span>
 			<br><br>
 
   <input type="text"id="smart" name="firstname" placeholder="Email">
-	<span class="sde">
-		<input type="text" id="smarts" name="lastname" placeholder="Password"></span>
 			<br><br></div>
-<button onclick="myFunction()" class="trew">Create account</button></center>
-<div class="ret"><center> <small> <font color="white" >Copyright © 2017 Smart Parks Limited.Created by <a href="https://www.linkedin.com/in/adriealle-dsouza-955755117">Adriealle Dsouza</a></font> </small></center></div></footer>
+<button onclick="myFunction()" class="trew">Apply</button></center>
+<footer><div class="ret"><center> <small> <font color="white" > Copyright © 2017 Smart Parks Limited.Created by <a href="https://www.linkedin.com/in/adriealle-dsouza-955755117">Adriealle Dsouza</a> </font> </small></center></div></footer>
+</div>
+
+  
   </div>
 	<audio
   src="deb_clai.mp3"
