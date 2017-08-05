@@ -122,9 +122,10 @@ border-color:#F32C52;
 				margin:7.25em;
 			}
 			.sail{
-				background: #cb2d3e;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		/*		background: #cb2d3e;  /* fallback for old browsers */
+		background: linear-gradient(to bottom, #ef473a 0%, #cb2d3e 100%);
+/*background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 			}
 			.fell{
