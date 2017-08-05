@@ -1,7 +1,7 @@
             .he{
 				color:#4db6ac;
 				font-size:8em;
-				letter-spacing:10px;
+				letter-spacing:0.06em;
 				
 			}
 			.a{
@@ -136,6 +136,12 @@ border-color:#F32C52;
             .feff{
 				float:left;
 				margin:3.5em;
+			}
+			.lele{
+				height:20em;
+				width:17em;
+				
+				
 			}
             .fe{
 				width:30em ;
