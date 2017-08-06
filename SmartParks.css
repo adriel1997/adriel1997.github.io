@@ -133,6 +133,19 @@ border-color:#F32C52;
 				color:white;
 				
 			}
+			@media screen and (max-width:600px){
+				.feff{
+				float:left;
+				margin:1.25em;
+				}
+				
+			.lele{
+				height:10em;
+				width:10em;
+			}
+				
+			}
+			
             .feff{
 				float:left;
 				margin:4.25em;
@@ -140,8 +153,6 @@ border-color:#F32C52;
 			.lele{
 				height:20em;
 				width:27em;
-				
-				
 			}
             .fe{
 				width:30em ;
