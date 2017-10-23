@@ -53,7 +53,7 @@
 <script>
 function beta(){
 var d = document.getElementById("opopo").value;
-var firebaseRefff= firebase.database().ref('Wait-list');
+var firebaseRefff= firebase.database().ref('hello');
 firebaseRefff.on('child_added', snap=> {
 var slot=snap.getKey();	
 var email=snap.child("Email").val();
