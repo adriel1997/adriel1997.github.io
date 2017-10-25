@@ -2,7 +2,7 @@
     <head>
 	<meta name="robots" content="noindex">
 	<link href="data.css" rel="stylesheet">
-       <title>Smart Parks</title>
+       <title>JOLT</title>
 	   <link href="SmartParkslog.css" rel="stylesheet">
 	   <link href="SmartParkslog.css" type="css" rel="stylesheet"/>
 	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -55,11 +55,11 @@ var firebaseRefff= firebase.database().ref('Wait/List');
 firebaseRefff.on('child_added', snap=> {
 var slot=snap.getKey();	
 var email=snap.child("NAME").val();
-var pick=snap.child("DATE").val();
-//var drop=snap.child("DropOFF").val();
-//var fare=snap.child("Fare").val();
-//var count=snap.child("Passengers").val();
-$("table tbody").append("<tr><td>"+slot+"</td><td>"+email+"</td><td>"+pick+"</td></tr>");
+var pick=snap.child("PickUP").val();
+var drop=snap.child("DropOff").val();
+var fare=snap.child("Fare").val();
+var count=snap.child("Passengers").val();
+$("table tbody").append("<tr><td>"+slot+"</td><td>"+email+"</td><td>"+pick+"</td><td>"+drop+"</td><td>"+fare+"</td><td>"+count+"</td></tr>");
     
 	});
 }
@@ -68,7 +68,7 @@ $("table tbody").append("<tr><td>"+slot+"</td><td>"+email+"</td><td>"+pick+"</td
     <body class="eww">
 <center>
 <p class="rent">Click the below button to retrieve database.(*5sec delay, not realtime)<br><br></p>
-<button class="de" onclick="beta()">AMBIENCE PARKING</button>  
+<button class="de" onclick="beta()">Retrieve data</button>  
 		</center>
 
 <div class="table-responsive">
@@ -77,8 +77,11 @@ $("table tbody").append("<tr><td>"+slot+"</td><td>"+email+"</td><td>"+pick+"</td
     <thead>
       <tr>
         <th>ID</th>
-		<th>NAME</th>
-        <th>DATE</th>
+		<th>Email</th>
+        <th>PickUp Time</th>
+		<th>DropOff Time</th>
+		<th>fare</th>
+		<th>Number of passengers</th>
         </tr>
     </thead>
     <tbody id="opopo">
