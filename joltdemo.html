@@ -58,8 +58,9 @@ var email=snap.child("Email").val();
 var pick=snap.child("PickUP").val();
 var drop=snap.child("DropOff").val();
 var fare=snap.child("Fare").val();
+var date=snap.child("Date").val();
 var count=snap.child("Passengers").val();
-$("table tbody").append("<tr><td>"+slot+"</td><td>"+email+"</td><td>"+pick+"</td><td>"+drop+"</td><td>"+fare+"</td><td>"+count+"</td></tr>");
+$("table tbody").append("<tr><td>"+slot+"</td><td>"+email+"</td><td>"+date+"</td><td>"+pick+"</td><td>"+drop+"</td><td>"+fare+"</td><td>"+count+"</td></tr>");
     
 	});
 }
@@ -78,6 +79,7 @@ $("table tbody").append("<tr><td>"+slot+"</td><td>"+email+"</td><td>"+pick+"</td
       <tr>
         <th>ID</th>
 		<th>Email</th>
+		<th>Date</th>
         <th>PickUp Time</th>
 		<th>DropOff Time</th>
 		<th>fare</th>
