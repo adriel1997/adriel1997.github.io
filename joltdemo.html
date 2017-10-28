@@ -59,14 +59,15 @@ var pick=snap.child("PickUP").val();
 var drop=snap.child("DropOff").val();
 var fare=snap.child("Fare").val();
 var date=snap.child("Date").val();
+var loc=snap.child("Location").val();
 var count=snap.child("Passengers").val();
-$("table tbody").append("<tr><td>"+slot+"</td><td>"+email+"</td><td>"+date+"</td><td>"+pick+"</td><td>"+drop+"</td><td>"+fare+"</td><td>"+count+"</td></tr>");
+$("table tbody").append("<tr><td>"+slot+"</td><td>"+email+"</td><td>"+date+"</td><td>"+pick+"</td><td>"+drop+"</td><td>"+loc+"</td><td>"+fare+"</td><td>"+count+"</td></tr>");
     
 	});
 }
 </script>
 
-    <body class="eww">
+    <body class="eww" onload="beta()">
 <center>
 <p class="rent">Click the below button to retrieve database.(*5sec delay, not realtime)<br><br></p>
 <button class="de" onclick="beta()">Retrieve data</button>  
@@ -82,7 +83,8 @@ $("table tbody").append("<tr><td>"+slot+"</td><td>"+email+"</td><td>"+date+"</td
 		<th>Date</th>
         <th>PickUp Time</th>
 		<th>DropOff Time</th>
-		<th>fare</th>
+		<th>Location</th>
+		<th>Fare</th>
 		<th>Number of passengers</th>
         </tr>
     </thead>
