@@ -65,12 +65,19 @@ $("table tbody").append("<tr><td>"+slot+"</td><td>"+email+"</td><td>"+date+"</td
     
 	});
 }
+function bet(){
+var d = document.getElementById("sm").value;
+ firebase.database().ref('Wait/List/'+d).remove();}
+
 </script>
 
     <body class="eww" onload="beta()">
 <center>
 <p class="rent">Click the below button to retrieve database.(*5sec delay, not realtime)<br><br></p>
-<button class="de" onclick="beta()">Retrieve data</button>  
+<span class="sde">
+		<input type="text" id="sm" name="lastname" placeholder="ID"></span>
+			<br><br>
+<button class="de" onclick="bet()">Remove</button>  
 		</center>
 
 <div class="table-responsive">
