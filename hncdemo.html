@@ -1,0 +1,130 @@
+<html>
+    <head>
+	<meta name="robots" content="noindex">
+	<link href="SmartParkslog.css" rel="stylesheet">
+       <title>Smart Parks</title>
+	   <!-- Latest compiled and minified CSS -->
+	   <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-database.js"></script>	   
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyBSryO6JFyi-ZubeIPuRnr2zOY1ycGLrLE",
+    authDomain: "smartparks-34c04.firebaseapp.com",
+    databaseURL: "https://smartparks-34c04.firebaseio.com",
+    projectId: "smartparks-34c04",
+    storageBucket: "smartparks-34c04.appspot.com",
+    messagingSenderId: "1067016106063"
+  };
+function myFunctio(){
+  var ref = firebase.database().ref();
+
+ref.on("value", function(snapshot) {
+   console.log(snapshot.val());
+}, function (error) {
+   console.log("Error: " + error.code);
+});}
+
+
+  firebase.initializeApp(config);
+  function writeUserData(plate, email, model,name,phone,pass) {
+  firebase.database().ref('USERS/' + plate).set({
+    NAME: name,
+    EMAIL: email,
+	MODEL:model,
+	PHONE:phone,
+	PASSWORD:pass
+  });
+}
+
+function myFunction(){
+
+var a = document.getElementById("s").value;
+var s = document.getElementById("sm").value;
+var d = document.getElementById("sma").value;
+var f = document.getElementById("smar").value;
+var g = document.getElementById("smart").value;
+var h = document.getElementById("smarts").value;
+writeUserData(d,g,f,a,s,h);
+document.getElementById("rew").disabled = true;
+alert("Continue To Log-In Page ");
+}
+
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="jsq.js"></script>
+	   <link href="SmartParkslog.css" type="css" rel="stylesheet"/>
+	   <link href="SmartParks.css" type="css" rel="stylesheet"/>
+	</head>
+
+	<header>
+	
+	<nav class="navbar navbar-default" id="opp">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <a class="navbar-brand" href="index.html" ><img class="im" alt="Brand" src="logo.png" height="50" width="50"></a>	
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+         <p class="if"> Welcome To Smart Parks</p>
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="smartsign.html">Sign-Up</a></li>
+        <li><a href="view.html">Slot Status</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    </header>
+    <body class="yelp" > 
+		
+<h1 class="he">
+	<center>
+	<br>Smart Parks<br><br>
+	</center>
+	</h1>
+	<center><div class="s">
+	<p id="lin"><img class="il" alt="Brand" src="logo.png" height="100" width="100">Sign-Up</p>
+	<div id="oop">
+  <input type="text" id="s" name="firstname" placeholder="First Name">
+  
+	<span class="sde">
+		<input type="text" id="sm" name="lastname" placeholder="Phone Number"></span>
+			<br><br>
+  <input type="text" id="sma" name="firstname" placeholder="Plate Number">
+	<span class="sde">	
+		<input type="text"id="smar" name="lastname" placeholder="Car Model"></span>
+			<br><br>
+
+  <input type="text"id="smart" name="firstname" placeholder="Email">
+	<span class="sde">
+		<input type="text" id="smarts" name="lastname" placeholder="Password"></span>
+			<br><br></div>
+<button onclick="myFunction()" class="trew">Create account</button>
+<div class="ret"><center> <small> <font color="white" >Copyright © 2017 Smart Parks Limited.Created by <a href="https://www.linkedin.com/in/adriealle-dsouza-955755117">Adriealle Dsouza</a></font> </small></center></div></footer>
+  </div>
+	<audio
+  src="deb_clai.mp3"
+  autoplay loop>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</body>
+</html>
