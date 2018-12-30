@@ -32,8 +32,9 @@ ref.on("value", function(snapshot) {
   firebase.initializeApp(config);
   function writeUserData(plate, email,date) {
   
-  firebase.database().ref('Notifications/'+plate).set({
+  firebase.database().ref('Notifications/').set({
     Message: email,
+	Society: plate,
 	datestamp: date
   });
 }
