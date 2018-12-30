@@ -28,13 +28,14 @@ ref.on("value", function(snapshot) {
 
 
   firebase.initializeApp(config);
-  function writeUserData(plate, email, model,name,phone,pass) {
+  function writeUserData(plate, email, model,name,phone,pass,date) {
   firebase.database().ref('USERS/' + plate).set({
     NAME: name,
     EMAIL: email,
 	MODEL:model,
 	PHONE:phone,
-	PASSWORD:pass
+	PASSWORD:pass,
+	Dates:date
   });
 }
 
@@ -42,11 +43,20 @@ function myFunction(){
 
 var a = document.getElementById("s").value;
 var s = document.getElementById("sm").value;
-var d = document.getElementById("sma").value;
+var dee = document.getElementById("sma").value;
 var f = document.getElementById("smar").value;
 var g = document.getElementById("smart").value;
 var h = document.getElementById("smarts").value;
-writeUserData(d,g,f,a,s,h);
+var d = new Date();
+  var date=d.getDate();
+  var month=d.getMonth()+1;
+  var year=d.getYear();
+  var sec=d.getSeconds()+1;
+  var min=d.getMinutes()+1;
+  var hr=d.getHour()+1;
+  var date=date+"/"+month+"/"+year+" , "+hr+":"+min+":"+sec;
+
+writeUserData(dee,g,f,a,s,h,date);
 document.getElementById("rew").disabled = true;
 alert("Continue To Log-In Page ");
 }
