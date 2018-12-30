@@ -30,15 +30,8 @@ ref.on("value", function(snapshot) {
 
 
   firebase.initializeApp(config);
-  function writeUserData(plate, email) {
-  var d = new Date();
-  var date=d.getDate();
-  var month=d.getMonth()+1;
-  var year=d.getYear();
-  var sec=d.getSeconds()+1;
-  var min=d.getMinutes()+1;
-  var hr=d.getHour()+1;
-  var date=date+"/"+month+"/"+year+" , "+hr+":"+min+":"+sec;
+  function writeUserData(plate, email,date) {
+  
   firebase.database().ref('Notifications/'+plate).set({
     Message: email,
 	datestamp: date
@@ -50,8 +43,15 @@ function myFunction(){
 var d = document.getElementById("s").value;
 
 var g = document.getElementById("sm").value;
-
-writeUserData(d,g);
+var d = new Date();
+  var date=d.getDate();
+  var month=d.getMonth()+1;
+  var year=d.getYear();
+  var sec=d.getSeconds()+1;
+  var min=d.getMinutes()+1;
+  var hr=d.getHour()+1;
+  var date=date+"/"+month+"/"+year+" , "+hr+":"+min+":"+sec;
+writeUserData(d,g,date);
 document.getElementById("rew").disabled = true;
 alert("Continue To Log-In Page ");
 }
