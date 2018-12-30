@@ -2,7 +2,7 @@
     <head>
 	<meta name="robots" content="noindex">
 	<link href="SmartParkslog.css" rel="stylesheet">
-       <title>Smart Parks</title>
+       <title>HNC</title>
 	   <!-- Latest compiled and minified CSS -->
 	   <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-auth.js"></script>
@@ -30,25 +30,28 @@ ref.on("value", function(snapshot) {
 
 
   firebase.initializeApp(config);
-  function writeUserData(plate, email, model,name,phone,pass) {
-  firebase.database().ref('Notifications/').set({
-    NAME: name,
-    EMAIL: email,
-	MODEL:model,
-	PHONE:phone,
-	PASSWORD:pass
+  function writeUserData(plate, email) {
+  var d = new Date();
+  var date=d.getDate();
+  var month=d.getMonth()+1;
+  var year=d.getYear();
+  var sec=d.getSeconds()+1;
+  var min=d.getMinutes()+1;
+  var hr=d.getHour()+1;
+  var date=date+"/"+month+"/"+year+" , "+hr+":"+min+":"+sec;
+  firebase.database().ref('Notifications/'+plate).set({
+    Message: email,
+	datestamp: date
   });
 }
 
 function myFunction(){
 
-var a = document.getElementById("s").value;
-var s = document.getElementById("sm").value;
 var d = document.getElementById("sma").value;
-var f = document.getElementById("smar").value;
+
 var g = document.getElementById("smart").value;
-var h = document.getElementById("smarts").value;
-writeUserData(d,g,f,a,s,h);
+
+writeUserData(d,g);
 document.getElementById("rew").disabled = true;
 alert("Continue To Log-In Page ");
 }
@@ -88,10 +91,6 @@ alert("Continue To Log-In Page ");
          <p class="if"> Welcome To Hnc Updates Page</p>
         </div>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        
-        <li><a href="view.html">Slot Status</a></li>
-      </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -100,27 +99,18 @@ alert("Continue To Log-In Page ");
 		
 <h1 class="he">
 	<center>
-	<br>Smart Parks<br><br>
+	<br>HNC<br><br>
 	</center>
 	</h1>
 	<center><div class="s">
-	<p id="lin"><img class="il" alt="Brand" src="logo.png" height="100" width="100">Sign-Up</p>
+	<p id="lin"><img class="il" alt="Brand" src="logo.png" height="100" width="100">Message</p>
 	<div id="oop">
-  <input type="text" id="s" name="firstname" placeholder="First Name">
+  <input type="text" id="s" name="Society" placeholder="Society">
+	<span class="sde">
+		<input type="text" id="sm" name="Message" placeholder="Message"></span>
+			<br><br>
   
-	<span class="sde">
-		<input type="text" id="sm" name="lastname" placeholder="Phone Number"></span>
-			<br><br>
-  <input type="text" id="sma" name="firstname" placeholder="Plate Number">
-	<span class="sde">	
-		<input type="text"id="smar" name="lastname" placeholder="Car Model"></span>
-			<br><br>
-
-  <input type="text"id="smart" name="firstname" placeholder="Email">
-	<span class="sde">
-		<input type="text" id="smarts" name="lastname" placeholder="Password"></span>
-			<br><br></div>
-<button onclick="myFunction()" class="trew">Create account</button>
+<button onclick="myFunction()" class="trew">Submit</button>
 <div class="ret"><center> <small> <font color="white" >Copyright © 2017 Smart Parks Limited.Created by <a href="https://www.linkedin.com/in/adriealle-dsouza-955755117">Adriealle Dsouza</a></font> </small></center></div></footer>
   </div>
 	<audio
