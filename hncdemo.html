@@ -41,7 +41,7 @@ ref.on("value", function(snapshot) {
 
 function myFunction(){
 
-var d = document.getElementById("s").value;
+var de = document.getElementById("s").value;
 
 var g = document.getElementById("sm").value;
 var d = new Date();
@@ -52,7 +52,7 @@ var d = new Date();
   var min=d.getMinutes()+1;
   var hr=d.getHour()+1;
   var date=date+"/"+month+"/"+year+" , "+hr+":"+min+":"+sec;
-writeUserData(d,g,date);
+writeUserData(de,g,date);
 document.getElementById("rew").disabled = true;
 alert("Continue To Log-In Page ");
 }
