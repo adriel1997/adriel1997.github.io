@@ -28,13 +28,10 @@ ref.on("value", function(snapshot) {
 
 
   firebase.initializeApp(config);
-  function writeUserData(plate, email, model,name,phone,pass,time) {
+  function writeUserData(plate, email,time) {
   firebase.database().ref('NOTIFICATIONS/' + time).set({
-    NAME: name,
-    EMAIL: email,
-	MODEL:model,
-	PHONE:phone,
-	PASSWORD:pass
+    Society: name,
+    Message: email
   });
 }
 
@@ -53,7 +50,7 @@ var dar=(("0"+(dt.getMonth()+1)).slice(-2)) +" "+ (("0"+dt.getDate()).slice(-2))
 var darr =(dt.getHours()) +":"+ (dt.getMinutes())+":"+ (dt.getSeconds());
 var timeee="Posted on "+dar+" at "+darr;
 
-writeUserData(d,g,f,a,s,h,timeee);
+writeUserData(d,g,timeee);
 document.getElementById("rew").disabled = true;
 alert("Continue To Log-In Page ");
 }
