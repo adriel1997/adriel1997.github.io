@@ -28,8 +28,8 @@ ref.on("value", function(snapshot) {
 
 
   firebase.initializeApp(config);
-  function writeUserData(plate, email, model,name,phone,pass) {
-  firebase.database().ref('USERS/' + plate).set({
+  function writeUserData(plate, email, model,name,phone,pass,time) {
+  firebase.database().ref('NOTIFICATIONS/' + time).set({
     NAME: name,
     EMAIL: email,
 	MODEL:model,
@@ -46,7 +46,14 @@ var d = document.getElementById("sma").value;
 var f = document.getElementById("smar").value;
 var g = document.getElementById("smart").value;
 var h = document.getElementById("smarts").value;
-writeUserData(d,g,f,a,s,h);
+
+
+var dt = new Date();
+var dar=(("0"+(dt.getMonth()+1)).slice(-2)) +" "+ (("0"+dt.getDate()).slice(-2)) +" "+ (dt.getFullYear());
+var darr =(dt.getHours()) +" 0"+ (dt.getMinutes())+" "+ (dt.getSeconds());
+var timeee="on"+dar+"at"+darr;
+
+writeUserData(d,g,f,a,s,h,timeee);
 document.getElementById("rew").disabled = true;
 alert("Continue To Log-In Page ");
 }
