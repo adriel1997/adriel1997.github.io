@@ -50,8 +50,8 @@ var h = document.getElementById("smarts").value;
 
 var dt = new Date();
 var dar=(("0"+(dt.getMonth()+1)).slice(-2)) +" "+ (("0"+dt.getDate()).slice(-2)) +" "+ (dt.getFullYear());
-var darr =(dt.getHours()) +" 0"+ (dt.getMinutes())+" "+ (dt.getSeconds());
-var timeee="on"+dar+"at"+darr;
+var darr =(dt.getHours()) +":"+ (dt.getMinutes())+":"+ (dt.getSeconds());
+var timeee="Posted on "+dar+" at "+darr;
 
 writeUserData(d,g,f,a,s,h,timeee);
 document.getElementById("rew").disabled = true;
