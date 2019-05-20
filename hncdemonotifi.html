@@ -19,7 +19,7 @@
 <script>
  table
  {
-        width: 100%;
+        width: 100% ;
         margin-bottom: 20px;
 		border-collapse: collapse;
     }
@@ -46,43 +46,37 @@
   };
   firebase.initializeApp(config);
 </script> 
-<script src="index.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <body class="eww">
-
-
-<div class="table-responsive">
-<div class="container">         
-  <table class="table table-striped">
-    <thead>
-      <tr>
-	  <center><h1>
-	  <b>HNC NOTIFICATIONS</b></h1>
-      </center></tr>
-    </thead>
-    
-    <tbody id="opopo">
-    </tbody>
-  </table>
-  <div >
-  <span id="polka">
-  </span>
-  </div>
-</div>
-</div>
 <script>
-var d = document.getElementById("opopo").value;
+
 var firebaseRefff= firebase.database().ref('NOTIFICATIONS');
 firebaseRefff.on('child_added', snap=> {
 var slot=snap.getKey();	
 var alloted=snap.child("Society").val();
 var date=snap.child("Message").val();
-$("table tbody").append("<tr><td><b>"+slot+"</b><br>"+alloted+"<br>"+date+"</td></tr>");
+$("table tbody").append("<tr><td><b>"+slot+"</b><br><br><p>By "+date+"<p></b>"+alloted+"</td></tr>");
     
 	});
 
 </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <body class="eww">
+
+	  <center><h1>
+	  <b>HNC NOTIFICATIONS</b></h1>
+	  <p>Loading please wait for 5 secs ...</p>
+      </center>
+<div class="table-responsive">
+<div class="container">         
+  <table class="table table-striped">
+
+    <tbody id="opopo">
+    </tbody>
+  </table>
+ </div>
+</div>
 </body>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

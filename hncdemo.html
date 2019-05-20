@@ -46,7 +46,8 @@ var dt = new Date();
 var dar=(("0"+(dt.getMonth()+1)).slice(-2)) +" "+ (("0"+dt.getDate()).slice(-2)) +" "+ (dt.getFullYear());
 var darr =(dt.getHours()) +":"+ (dt.getMinutes())+":"+ (dt.getSeconds());
 var timeee="Posted on "+dar+" at "+darr;
-writeUserData(a,d,timeee);
+str = a.replace(/(?:\r\n|\r|\n)/g, '<br>');
+writeUserData(str,d,timeee);
 }
 
 </script>
