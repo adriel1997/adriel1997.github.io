@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="css/custom.css">
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -119,6 +120,21 @@
 			</div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
+
+  <div id="id01" class="modal">
+    <div class="modal-content">
+      <div class="modal-container">
+		<span class = "close" onclick = "document.getElementById('id01').style.display='none'">&times;</span>
+		<h1 id="modal-window-heading">Loading..</h1>
+		<img src="#" id="model-image">
+		<p id="modal-window-content">Loading..</p>
+		<div>
+		<a href="#contact" class="sim-btn hvr-bounce-to-top" id="github" target="_blank"><span>Github</span></a>
+		<a href="#contact" class="sim-btn hvr-bounce-to-top" id="website" target="_blank"><span>Website</span></a>
+		</div>
+      </div>
+    </div>
+  </div>
 	
 	<div id="portfolio" class="section lb">
 		<div class="container">
@@ -131,67 +147,15 @@
 				<div class="col-md-12">
 					<div class="button-group filter-button-group text-center">
 						<button class="active" data-filter="*">All</button>
-						<button data-filter=".gal_a">2021</button>
-						<button data-filter=".gal_b">2019</button>
-						<button data-filter=".gal_c">2018</button>
+						<button data-filter=".gal_d">2021</button>
+						<button data-filter=".gal_c">2019</button>
+						<button data-filter=".gal_b">2018</button>
+						<button data-filter=".gal_a">2017</button>
 					</div>
 				</div>
 			</div>
 			
-			<div class="gallery-list row">
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
-					<div class="gallery-single fix">
-						<img src="./images/projectPhotos/smartParksWebSq.png" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_b">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-02.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-03.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b gal_a">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-04.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-04.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-05.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-05.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_a">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-06.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
+			<div class="gallery-list row projectTiles">
 			</div>
 			</div>
 		</div>
@@ -240,16 +204,15 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
-
     <div class="copyrights">
         <div class="container">
             <div class="footer-distributed">
 				<a href="#"><img src="images/logo.png" alt="" /></a>
                 <div class="footer-center">
                     <p class="footer-links">
-                        <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a href="#">Contact</a>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
                     </p>
                 </div>
             </div>
@@ -267,10 +230,10 @@
 	<script src="js/headline.js"></script>
 	<!-- Contact form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
     <script src="js/jquery.vide.js"></script>
+	<script src="projectTiles.js"></script>
 
 </body>
 </html>
