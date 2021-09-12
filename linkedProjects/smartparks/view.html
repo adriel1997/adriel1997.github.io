@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <!--
+This was a playground project to try out different things.
+-->
     <meta charset="UTF-8">
     <title>Slot Status</title>
-	<link href="SmartParkslog.css" rel="stylesheet">
+	<link href="./css/SmartParkslog.css" rel="stylesheet">
+	<link href="./css/SmartParks.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <!-- Optional theme -->
@@ -25,8 +29,7 @@
   firebase.initializeApp(config);
   
   </script>
-  <script src="view.css"></script>
-  <link href="view.css" rel="stylesheet">
+  <link href="./css/view.css" rel="stylesheet">
 	<script src="https://cdn.firebase.com/libs/firebaseui/2.2.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.2.1/firebaseui.css" />
     <script type="text/javascript">
@@ -50,44 +53,50 @@
   </head>
   
 
-  <body class="uo">
+  <body class="view-slots-body">
     <!-- The surrounding HTML is left untouched by FirebaseUI.
          Your app may use that space for branding, controls and other customizations.-->
-<nav class="navbar navbar-default" id="opp">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-     <a class="navbar-brand" href="SmartParks.html" ><img class="im" alt="Brand" src="logo.png" height="50" width="50"></a>	
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-         <p class="if"> Welcome To Smart Parks</p>
-        </div>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-	  <li><a href="SmartParks.html">Home</a></li>
-	  <li><a href="apppage.html">Android Application</a></li>
-        <li><a href="smartsign.html">Customer Sign-Up</a></li>
-		<li><a href="map.html">Registered Car Parks</a></li>
-        <li><a href="view.html">Slot Status</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>  
-  <center><p class="ops">Login Page</p>
-    <p class="opl">Welcome please sign in first</p></center>
+<nav class="navbar navbar-default" id="smartParks-navbar">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+			<a class="navbar-brand" href="./home.html">
+				<img class="im" alt="Brand" src="./images/smartParksLogo.png" height="50" width="50">
+			</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<form class="navbar-form navbar-left">
+				<div class="form-group">
+					<p class="if">Welcome To Smart Parks</p>
+				</div>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="./home.html">Home</a>
+				</li>
+				<li><a href="./apppage.html">Android Application</a>
+				</li>
+				<li><a href="./smartsign.html">Customer Sign-Up</a>
+				</li>
+				<li><a href="./map.html">Registered Car Parks</a>
+				</li>
+				<li><a href="./view.html">Slot Status</a>
+				</li>
+				<li><a href="./database.html">Skip Login</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+ <center><p class="login-page-text">Login Page</p>
+    <p class="sign-in-text">Welcome please sign in first</p></center>
 	<div id="firebaseui-auth-container"><p></p></div>
 	<footer><div class="ret"><center> <small> <font color="white" > Copyright © 2017 Smart Parks Limited.<br>Created by <a href="https://www.linkedin.com/in/adriealle-dsouza-955755117">Adriealle Dsouza</a> </font> </small></center></div></footer>
-<audio src="deb_clai.mp3"autoplay loop>
   </body>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
