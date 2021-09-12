@@ -38,7 +38,6 @@
     <link rel="stylesheet" href="css/custom.css">
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -100,10 +99,11 @@
                 <div class="col-md-6">
                     <div class="message-box">                        
                         <h2>About Me</h2>
-                        <p>
-							I'm a Java developer pursuing Bachelor's of Technology in Computer Science and always strive to create optimised code with a clean user interface in my projects.
-							I've created programs using C programming and Java and built various applications in android as well as websites using client side scripting languages.
-							I've also performed MapReduce programs using Java Hadoop and Flume, and I'm currently working on using Cloud Computing in my Final Year Project.
+                        <p style="text-align:justify">
+							I'm a fullstack developer, working everyday to learning and absorb new things.
+							Languages: Java, C#, Python3, C and JS
+							Stack: Git, Kubernetes, Docker, Sql Server, Android(Native), Hadoop, Flume and Cloud Computing.<br> 
+							<h4><a href="#portfolio"><span>Go To Portfolio</span></a></h4>
 						</p>
                         <a href="#contact" class="sim-btn hvr-bounce-to-top"><span>Contact me</span></a>
                     </div><!-- end messagebox -->
@@ -121,20 +121,30 @@
         </div><!-- end container -->
     </div><!-- end section -->
 
-  <div id="id01" class="modal">
-    <div class="modal-content">
-      <div class="modal-container">
-		<span class = "close" onclick = "document.getElementById('id01').style.display='none'">&times;</span>
-		<h1 id="modal-window-heading">Loading..</h1>
-		<img src="#" id="model-image">
-		<p id="modal-window-content">Loading..</p>
-		<div>
-		<a href="#contact" class="sim-btn hvr-bounce-to-top" id="github" target="_blank"><span>Github</span></a>
-		<a href="#contact" class="sim-btn hvr-bounce-to-top" id="website" target="_blank"><span>Website</span></a>
-		</div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+			<h4 class="modal-title" style="text-align:center">Loading...</h4>
+			<img src="#" id="model-image" class="window-image">
+			<p class="modal-description" style="text-align:justify">Loading...</p>
+			<div class="text-center">
+				<a href="#contact" class="sim-btn hvr-bounce-to-top" id="github" target="_blank"><span>Github</span></a>
+				<a href="#contact" class="sim-btn hvr-bounce-to-top" id="website" target="_blank"><span>Website</span></a>
+			</div>
+        </div>
       </div>
+      
     </div>
   </div>
+  
+</div>
 	
 	<div id="portfolio" class="section lb">
 		<div class="container">
