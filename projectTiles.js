@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		var containerDiv = document.createElement('div'),
 		imgDiv = document.createElement('div'),
 		galaryDiv = document.createElement('div'),
-		anchorButton = document.createElement('button'),
+		a = document.createElement('a'),
 		i = document.createElement('i'),
 		img = document.createElement('img');
 		
@@ -64,14 +64,15 @@ document.addEventListener('DOMContentLoaded', function() {
 		img.src = project['image'];
 		img.className = "img-fluid testing1";
 		imgDiv.className = 'img-overlay ';
-		anchorButton.className = 'hoverbutton global-radius';
+		a.className = 'hoverbutton global-radius';
+		a.href='#1';
 		i.className = "fa fas fa-book";
 		i.setAttribute('data-toggle','modal');
 		i.setAttribute('data-target','#myModal');
 		i.onclick = function() {openModelWindow(project['project_name']);};
 		
-		anchorButton.appendChild(i);
-		imgDiv.appendChild(anchorButton);
+		a.appendChild(i);
+		imgDiv.appendChild(a);
 		galaryDiv.appendChild(img);
 		galaryDiv.appendChild(imgDiv);
 		containerDiv.appendChild(galaryDiv);
