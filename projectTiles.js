@@ -25,7 +25,7 @@ var projects = [
 },
 {
 	"project_name":"Third Eye(Android)",
-	"description":"Developing an android application with using Google Cloud, DialogFlow and Firebase.",
+	"description":"Developed an android application with using Google Cloud, DialogFlow and Firebase.",
 	"website":null,
 	"github":"https://github.com/adriel1997/Major-Project/blob/master/Major%20Project%20Report.pdf",
 	"image":"./images/projectPhotos/thirdEyeApp.png",	
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		var containerDiv = document.createElement('div'),
 		imgDiv = document.createElement('div'),
 		galaryDiv = document.createElement('div'),
-		a = document.createElement('a'),
+		anchorButton = document.createElement('button'),
 		i = document.createElement('i'),
 		img = document.createElement('img');
 		
@@ -64,14 +64,14 @@ document.addEventListener('DOMContentLoaded', function() {
 		img.src = project['image'];
 		img.className = "img-fluid testing1";
 		imgDiv.className = 'img-overlay ';
-		a.className = 'hoverbutton global-radius';
+		anchorButton.className = 'hoverbutton global-radius';
 		i.className = "fa fas fa-book";
 		i.setAttribute('data-toggle','modal');
 		i.setAttribute('data-target','#myModal');
 		i.onclick = function() {openModelWindow(project['project_name']);};
 		
-		a.appendChild(i);
-		imgDiv.appendChild(a);
+		anchorButton.appendChild(i);
+		imgDiv.appendChild(anchorButton);
 		galaryDiv.appendChild(img);
 		galaryDiv.appendChild(imgDiv);
 		containerDiv.appendChild(galaryDiv);
