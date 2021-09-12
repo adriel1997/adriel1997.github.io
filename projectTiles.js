@@ -8,11 +8,19 @@ var projects = [
 	"order":"gal_a"
 },
 {
+	"project_name":"Holy Name Church(Android)",
+	"description":"An application which lists important prayers, bible links and other important information. Built using sqlite, fragments and xml to maintain light version.",
+	"website":"https://github.com/adriel1997/holynamechurch#readme",
+	"github":"https://github.com/adriel1997/holynamechurch",
+	"image":"./images/projectPhotos/holyNameChurchApp.jpg",	
+	"order":"gal_c"
+},
+{
 	"project_name":"Smart Parks(Web)",
 	"description":"A website which uses html, css, javascript and uses a real time database from Firebase. It hosts the download link for Smart Parks(Android). It has a feature which shows you the real time status of car parks after user authentication.",
 	"website":"https://adriel1997.github.io/linkedProjects/smartparks/home.html",
 	"github":"https://github.com/adriel1997/adriel1997.github.io/tree/master/linkedProjects/smartparks",
-	"image":"./images/projectPhotos/smartParksWeb.png",	
+	"image":"./images/projectPhotos/smartParksWeb.PNG",	
 	"order":"gal_a"
 },
 {
