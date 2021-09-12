@@ -42,8 +42,8 @@ var projects = [
 {
 	"project_name":"Jolt",
 	"description":"Jolt :Industrial project which provides solar chargable scooters to people of Delhi / NCR and college students, to commute to shorter distances at cheap fares. Oversaw the development of 3 android applications. Database integration, administration to user authentication and storage of sensitive documents and scooter finding algorithum were some of the key responsibilities.",
-	"website":"https://www.joltindia.com/",
-	"github":"https://github.com/adriel1997/jolt",
+	"website":"https://github.com/adriel1997/Jolt-NCU",
+	"github":"https://github.com/adriel1997/Jolt-NCU#2-project-description",
 	"image":"./images/projectPhotos/joltApp.png",	
 	"order":"gal_a"
 }
